@@ -1,0 +1,22 @@
+{
+  "name": "tumble-guys",
+  "version": "1.0.0",
+  "description": "A high-quality Fall Guys-inspired 3D party platformer game for the web",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["game", "3d", "platformer", "threejs", "fall-guys"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0",
+    "@dimforge/rapier3d-compat": "^0.12.0",
+    "howler": "^2.2.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

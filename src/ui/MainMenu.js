@@ -179,22 +179,26 @@ export default class MainMenu {
     document.getElementById('win-position').textContent = `Position: ${positionText}`;
 
     this.winScreenElement.classList.remove('hidden');
+    this.winScreenElement.style.display = 'block';
     this.hudElement.classList.add('hidden');
   }
 
   nextLevel() {
     this.winScreenElement.classList.add('hidden');
+    this.winScreenElement.style.display = 'none';
     const nextIndex = (this.currentLevelIndex + 1) % this.levels.length;
     this.startGame(nextIndex);
   }
 
   replayLevel() {
     this.winScreenElement.classList.add('hidden');
+    this.winScreenElement.style.display = 'none';
     this.startGame(this.currentLevelIndex);
   }
 
   winScreenToMenu() {
     this.winScreenElement.classList.add('hidden');
+    this.winScreenElement.style.display = 'none';
     this.controlsElement.classList.add('hidden');
     this.game.stop();
     this.show();

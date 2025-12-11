@@ -21,6 +21,7 @@ export default class Game {
     this.clock = new THREE.Clock();
     this.gameTime = 0;
     this.raycaster = new THREE.Raycaster();
+    this.mainMenu = null; // Will be set by MainMenu
   }
 
   async init() {
@@ -230,7 +231,11 @@ export default class Game {
   onWin() {
     this.stop();
     console.log('Level completed!', 'Time:', this.gameTime.toFixed(2));
-    // TODO: Show win screen
+    
+    // Show win screen through main menu
+    if (this.mainMenu) {
+      this.mainMenu.showWinScreen();
+    }
   }
 
   animate() {

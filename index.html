@@ -241,6 +241,27 @@
         <div>Space - Jump</div>
         <div>ESC - Pause</div>
       </div>
+
+      <!-- Win Screen -->
+      <div id="win-screen" class="hidden" style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.9);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        z-index: 300;
+      ">
+        <h2 style="font-size: 64px; margin-bottom: 20px;">🎉 YOU WIN! 🎉</h2>
+        <div id="win-time" style="font-size: 32px; margin-bottom: 10px;">Time: 0:00</div>
+        <div id="win-position" style="font-size: 24px; margin-bottom: 30px;">Position: 1st</div>
+        <button class="menu-button" id="btn-next-level">Next Level</button>
+        <button class="menu-button" id="btn-replay">Replay Level</button>
+        <button class="menu-button" id="btn-main-menu">Main Menu</button>
+      </div>
     </div>
   </div>
 

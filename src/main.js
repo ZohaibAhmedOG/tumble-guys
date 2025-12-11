@@ -22,6 +22,11 @@ async function init() {
     // Initialize main menu
     mainMenu = new MainMenu(game, audioManager);
     
+    // Store references for global access
+    window.game = game;
+    window.game.mainMenu = mainMenu;
+    game.mainMenu = mainMenu;
+    
     // Hide loading screen
     loadingScreen.classList.add('hidden');
     
@@ -54,6 +59,3 @@ window.addEventListener('resize', () => {
     game.onResize();
   }
 });
-
-// Export game instance for debugging
-window.game = game;

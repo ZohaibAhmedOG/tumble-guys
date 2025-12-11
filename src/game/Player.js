@@ -104,6 +104,9 @@ export default class Player {
     // Update jump cooldown
     if (this.jumpCooldown > 0) {
       this.jumpCooldown -= deltaTime;
+      if (this.jumpCooldown <= 0) {
+        this.canJump = true;
+      }
     }
 
     // Get current velocity
@@ -163,11 +166,6 @@ export default class Player {
     this.physics.applyImpulse(this.physicsBody, impulse);
     this.canJump = false;
     this.jumpCooldown = 0.2; // 200ms cooldown
-    
-    // Reset jump after a short delay
-    setTimeout(() => {
-      this.canJump = true;
-    }, 100);
   }
 
   syncMeshWithPhysics() {

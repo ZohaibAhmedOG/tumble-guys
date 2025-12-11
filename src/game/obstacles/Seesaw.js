@@ -42,7 +42,7 @@ export default class Seesaw {
     this.mesh.receiveShadow = true;
     this.scene.add(this.mesh);
 
-    // Create physics body with rotation enabled around X axis
+    // Create physics body with rotation enabled around Z axis
     const result = this.physics.createBox(
       { x: this.position.x, y: this.position.y + 0.75, z: this.position.z },
       { x: this.width, y: 0.5, z: this.length },
@@ -53,7 +53,6 @@ export default class Seesaw {
     this.physicsId = result.id;
 
     // Enable rotation only around Z axis (for seesaw tilting)
-    this.physicsBody.lockRotations(false);
     this.physicsBody.setEnabledRotations(true, false, true, true);
     
     // Reduce damping for more responsive tilting

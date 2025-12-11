@@ -85,6 +85,7 @@ export default class AIOpponent {
     // Random chance to fail
     if (Math.random() < this.failChance * deltaTime) {
       this.fail();
+      this.syncMeshWithPhysics();
       return;
     }
 
